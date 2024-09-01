@@ -1,4 +1,3 @@
-// Replacing the `CardFooter` with a styled div inside the Card component.
 "use client"
 import Link from "next/link";
 import Image from "next/image";
@@ -52,7 +51,7 @@ export default function EventsPage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
-      <Header/>
+      <Header />
       <main className="flex-1">
         <section className="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
           <Image
@@ -110,7 +109,7 @@ export default function EventsPage() {
           </div>
         </section>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

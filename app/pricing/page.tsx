@@ -56,14 +56,14 @@ export default function MembershipPlans() {
 
   return (
     <div className="min-h-screen bg-[#E1E5F2]">
-        <Header/>
+      <Header />
       <h1 className="mb-2 text-center text-4xl font-bold text-[#022B3A] mt-5">Reassuringly Affordable</h1>
       <p className="mb-8 text-center text-xl text-[#1F7A8C]">All plans come with a 60-day money-back guarantee.</p>
 
       <div className="mb-8 flex items-center justify-center space-x-4">
         <span className={`text-lg ${!isAnnual ? 'text-[#022B3A] font-bold' : 'text-[#1F7A8C]'}`}>Monthly plans</span>
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           onClick={() => setIsAnnual(!isAnnual)}
           className="bg-white text-[#022B3A] hover:bg-[#B6D5F7]"
         >
@@ -76,11 +76,10 @@ export default function MembershipPlans() {
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className={`rounded-lg ${
-              plan.highlighted
+            className={`rounded-lg ${plan.highlighted
                 ? 'bg-[#1F7A8C] text-white'
                 : 'bg-white text-[#022B3A]'
-            } p-6 shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl`}
+              } p-6 shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl`}
           >
             <div className="flex flex-col items-center mb-4">
               {plan.icon}
@@ -92,11 +91,10 @@ export default function MembershipPlans() {
               <span className="text-base font-normal">{plan.price > 0 ? '/mo' : ''}</span>
             </p>
             <Button
-              className={`mb-6 w-full ${
-                plan.highlighted
+              className={`mb-6 w-full ${plan.highlighted
                   ? 'bg-white text-[#1F7A8C] hover:bg-[#B6D5F7]'
                   : 'bg-[#1F7A8C] text-white hover:bg-[#1F7A8C]/90'
-              } transition-colors duration-300 ease-in-out`}
+                } transition-colors duration-300 ease-in-out`}
             >
               {plan.buttonText}
             </Button>
@@ -111,7 +109,7 @@ export default function MembershipPlans() {
           </div>
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
